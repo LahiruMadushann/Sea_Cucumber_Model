@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:ns1="http://www.sea-cucumber.org/relationship/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra/Class_C/Color/Grey">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra/Class_C/Color"/>
+    <ns1:has_color rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra/Class_C/Color"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta/Class_B/Length/8cm">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta/Class_B/Length"/>
+    <ns1:has_value rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta/Class_B/Length"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera/Class_A/Color/Dark_Black">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera/Class_A/Color"/>
+    <ns1:has_color rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera/Class_A/Color"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera/Class_B/Width/4cm">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera/Class_B/Width"/>
+    <ns1:has_value rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera/Class_B/Width"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra/Class_C/Width/2cm">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra/Class_C/Width"/>
+    <ns1:has_value rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra/Class_C/Width"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta/Class_B/Length">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta/Class_B"/>
+    <ns1:has rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta/Class_B"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta/Class_A">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta"/>
+    <ns1:has_quality rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra/Class_A/Color">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra/Class_A"/>
+    <ns1:has rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra/Class_A"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta/Class_C">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta"/>
+    <ns1:has_quality rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta/Class_C/Width/2cm">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta/Class_C/Width"/>
+    <ns1:has_value rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta/Class_C/Width"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra/Class_A/Width/5cm">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra/Class_A/Width"/>
+    <ns1:has_value rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra/Class_A/Width"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta/Class_B">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta"/>
+    <ns1:has_quality rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta/Class_B/Width">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta/Class_B"/>
+    <ns1:has rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta/Class_B"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta/Class_A/Colour">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta/Class_A"/>
+    <ns1:has rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta/Class_A"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta/Class_B/Color/Dark_Brown">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta/Class_B/Color"/>
+    <ns1:has_color rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta/Class_B/Color"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta/Class_A/Colour/Black">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta/Class_A/Colour"/>
+    <ns1:has_color rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta/Class_A/Colour"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra/Class_B">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra"/>
+    <ns1:has_quality rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber"/>
+    <ns1:has_type rdf:resource="http://www.sea-cucumber.org/classes/seacucumber"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra/Class_B/Width">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra/Class_B"/>
+    <ns1:has rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra/Class_B"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera/Class_C/Width/3cm">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera/Class_C/Width"/>
+    <ns1:has_value rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera/Class_C/Width"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera/Class_C">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera"/>
+    <ns1:has_quality rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera/Class_A/Color">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera/Class_A"/>
+    <ns1:has rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera/Class_A"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra/Class_B/Color/Dark_Grey">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra/Class_B/Color"/>
+    <ns1:has_color rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra/Class_B/Color"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra/Class_A/Length">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra/Class_A"/>
+    <ns1:has rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra/Class_A"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera/Class_B/Color/Black">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera/Class_B/Color"/>
+    <ns1:has_color rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera/Class_B/Color"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra/Class_A/Length/13cm">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra/Class_A/Length"/>
+    <ns1:has_value rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra/Class_A/Length"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera/Class_C/Color">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera/Class_C"/>
+    <ns1:has rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera/Class_C"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera/Class_B">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera"/>
+    <ns1:has_quality rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera/Class_A/Width/5cm">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera/Class_A/Width"/>
+    <ns1:has_value rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera/Class_A/Width"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra/Class_A/Width">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra/Class_A"/>
+    <ns1:has rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra/Class_A"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta/Class_C/Length">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta/Class_C"/>
+    <ns1:has rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta/Class_C"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta/Class_C/Length/6cm">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta/Class_C/Length"/>
+    <ns1:has_value rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta/Class_C/Length"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera/Class_B/Length/12">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera/Class_B/Length"/>
+    <ns1:has_value rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera/Class_B/Length"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra/Class_C/Color">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra/Class_C"/>
+    <ns1:has rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra/Class_C"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera/Class_C/Width">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera/Class_C"/>
+    <ns1:has rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera/Class_C"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta/Class_B/Width/3cm">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta/Class_B/Width"/>
+    <ns1:has_value rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta/Class_B/Width"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera/Class_B/Length">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera/Class_B"/>
+    <ns1:has rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera/Class_B"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta/Class_A/Width/4cm">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta/Class_A/Width"/>
+    <ns1:has_value rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta/Class_A/Width"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera/Class_C/Length/9cm">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera/Class_C/Length"/>
+    <ns1:has_value rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera/Class_C/Length"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra/Class_C">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra"/>
+    <ns1:has_quality rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra/Class_C/Length/9cm">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra/Class_C/Length"/>
+    <ns1:has_value rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra/Class_C/Length"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta/Class_B/Color">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta/Class_B"/>
+    <ns1:has rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta/Class_B"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera/Class_B/Color">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera/Class_B"/>
+    <ns1:has rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera/Class_B"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra/Class_B/Length/11cm">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra/Class_B/Length"/>
+    <ns1:has_value rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra/Class_B/Length"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta/Class_C/Color">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta/Class_C"/>
+    <ns1:has rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta/Class_C"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera/Class_C/Length">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera/Class_C"/>
+    <ns1:has rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera/Class_C"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra/Class_A">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra"/>
+    <ns1:has_quality rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera/Class_C/Color/Dark_Brown">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera/Class_C/Color"/>
+    <ns1:has_color rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera/Class_C/Color"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta/Class_C/Color/Brown">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta/Class_C/Color"/>
+    <ns1:has_color rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta/Class_C/Color"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera/Class_B/Width">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera/Class_B"/>
+    <ns1:has rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera/Class_B"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra/Class_B/Color">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra/Class_B"/>
+    <ns1:has rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra/Class_B"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra/Class_A/Color/Black">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra/Class_A/Color"/>
+    <ns1:has_color rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra/Class_A/Color"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera/Class_A">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera"/>
+    <ns1:has_quality rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera/Class_A/Length/14cm">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera/Class_A/Length"/>
+    <ns1:has_value rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera/Class_A/Length"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/Ontology">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra/Class_C/Width">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra/Class_C"/>
+    <ns1:has rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra/Class_C"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera/Class_A/Width">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera/Class_A"/>
+    <ns1:has rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera/Class_A"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta/Class_C/Width">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta/Class_C"/>
+    <ns1:has rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta/Class_C"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra/Class_B/Width/4cm">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra/Class_B/Width"/>
+    <ns1:has_value rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra/Class_B/Width"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta/Class_A/Width">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta/Class_A"/>
+    <ns1:has rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta/Class_A"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra/Class_B/Length">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra/Class_B"/>
+    <ns1:has rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra/Class_B"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta/Class_A/Length">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta/Class_A"/>
+    <ns1:has rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta/Class_A"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber"/>
+    <ns1:has_type rdf:resource="http://www.sea-cucumber.org/classes/seacucumber"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta/Class_A/Length/12cm">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta/Class_A/Length"/>
+    <ns1:has_value rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta/Class_A/Length"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Bahadschia_Marmorta">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber"/>
+    <ns1:has_type rdf:resource="http://www.sea-cucumber.org/classes/seacucumber"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra/Class_C/Length">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra/Class_C"/>
+    <ns1:has rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Scabra/Class_C"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera/Class_A/Length">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera/Class_A"/>
+    <ns1:has rdf:resource="http://www.sea-cucumber.org/classes/seacucumber/Holothuria_Spinifera/Class_A"/>
+  </rdf:Description>
+</rdf:RDF>

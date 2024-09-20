@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Data</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+          integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+            integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+          integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <style>
+        .vtree ul.vtree-subtree, .vtree li.vtree-leaf {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            position: relative;
+        }
+
+        .vtree li.vtree-leaf {
+            background-position: -90px 0;
+            background-repeat: repeat-y;
+            min-height: 18px;
+            line-height: 18px;
+        }
+
+        .vtree li.vtree-leaf::before {
+            content: '';
+            width: 18px;
+            height: 18px;
+            position: absolute;
+            background-position: -36px 0;
+        }
+
+        .vtree li.vtree-leaf li.vtree-leaf {
+            margin-left: 18px;
+        }
+
+        .vtree li.vtree-leaf:last-child {
+            background-image: none;
+        }
+
+        .vtree li.vtree-leaf.closed ul.vtree-subtree {
+            display: none;
+        }
+
+        .vtree li.vtree-leaf.vtree-has-children > span.vtree-toggle {
+            display: block;
+            width: 18px;
+            height: 18px;
+            background-position: -72px 0;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .vtree li.vtree-leaf.vtree-has-children.closed > span.vtree-toggle {
+            background-position: -54px 0;
+        }
+
+        .vtree a.vtree-leaf-label {
+            line-height: 18px;
+            display: inline-block;
+            vertical-align: top;
+            cursor: pointer;
+            max-width: 100%;
+            margin-left: 18px;
+            padding: 0 2px;
+            color: black;
+            text-decoration: none;
+        }
+
+        .vtree li.vtree-leaf a.vtree-leaf-label:hover {
+            background-color: #e7f4f9;
+            outline: 1px solid #d8f0fa;
+        }
+
+        .vtree li.vtree-leaf.vtree-selected > a.vtree-leaf-label {
+            background-color: #beebff;
+            outline: 1px solid #99defd;
+        }
+
+        .vtree-contextmenu {
+            position: absolute;
+            z-index: 9999999;
+            border: solid 1px #ccc;
+            background: #eee;
+            padding: 0px;
+            margin: 0px;
+            display: none;
+        }
+
+        .vtree-contextmenu li {
+            list-style: none;
+            padding: 1px 5px;
+            margin: 0px;
+            color: #333!important;
+            line-height: 20px;
+            height: 20px;
+            cursor: default;
+        }
+
+        .vtree-contextmenu li:hover {
+            color: #fff;
+            background-color: #3399ff;
+        }
+
+        .vtree li.vtree-leaf, .vtree li.vtree-leaf::before, .vtree li.vtree-leaf.vtree-has-children > span.vtree-toggle {
+            background-image: url(data:image/png;base64,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);
+        }
+
+    </style>
+    <script>
+      (function (root, factory) {
+          if (typeof define == 'function' && define.amd) {
+              define( factory );
+          } else if (typeof module === 'object' && module.exports) {
+              module.exports = factory();
+          } else {
+              root.VanillaTree = factory();
+          }
+      }(this, function () {
+          "use strict";
+          // Look at the Balalaika https://github.com/finom/balalaika
+          var $=function(n,e,k,h,p,m,l,b,d,g,f,c){c=function(a,b){return new c.i(a,b)};c.i=function(a,d){k.push.apply(this,a?a.nodeType||a==n?[a]:""+a===a?/</.test(a)?((b=e.createElement(d||"q")).innerHTML=a,b.children):(d&&c(d)[0]||e).querySelectorAll(a):/f/.test(typeof a)?/c/.test(e.readyState)?a():c(e).on("DOMContentLoaded",a):a:k)};c.i[f="prototype"]=(c.extend=function(a){g=arguments;for(b=1;b<g.length;b++)if(f=g[b])for(d in f)a[d]=f[d];return a})(c.fn=c[f]=k,{on:function(a,d){a=a.split(h);this.map(function(c){(h[b=a[0]+(c.b$=c.b$||++p)]=h[b]||[]).push([d,a[1]]);c["add"+m](a[0],d)});return this},off:function(a,c){a=a.split(h);f="remove"+m;this.map(function(e){if(b=(g=h[a[0]+e.b$])&&g.length)for(;d=g[--b];)c&&c!=d[0]||a[1]&&a[1]!=d[1]||(e[f](a[0],d[0]),g.splice(b,1));else!a[1]&&e[f](a[0],c)});return this},is:function(a){d=(b=this[0])&&(b.matches||b["webkit"+l]||b["moz"+l]||b["ms"+l]);return!!d&&d.call(b,a)}});return c}(window,document,[],/\.(.+)/,0,"EventListener","MatchesSelector");
+
+          var create = function( tagName, props ) {
+                  return $.extend( document.createElement( tagName ), props );
+              },
+              Tree = function( s, options ) {
+                  var _this = this,
+                      container = _this.container = $( s )[ 0 ],
+                      tree = _this.tree = container.appendChild( create( 'ul', {
+                          className: 'vtree'
+                      }) );
+
+                  _this.placeholder = options && options.placeholder;
+                  _this._placeholder();
+                  _this.leafs = {};
+                  tree.addEventListener( 'click', function( evt ) {
+                      if( $( evt.target ).is( '.vtree-leaf-label' ) ) {
+                          _this.select( evt.target.parentNode.getAttribute('data-vtree-id') );
+                      } else if( $( evt.target ).is( '.vtree-toggle' ) ) {
+                          _this.toggle( evt.target.parentNode.getAttribute('data-vtree-id') );
+                      }
+                  });
+
+                  if( options && options.contextmenu ) {
+                      tree.addEventListener( 'contextmenu', function( evt ) {
+                          var menu;
+                          $( '.vtree-contextmenu' ).forEach( function( menu ) {
+                              menu.parentNode.removeChild( menu );
+                          });
+                          if( $( evt.target ).is( '.vtree-leaf-label' ) ) {
+                              evt.preventDefault();
+                              evt.stopPropagation();
+                              menu = create( 'menu', {
+                                  className: 'vtree-contextmenu'
+                              });
+
+                              var rect = evt.target.getBoundingClientRect();
+                              $.extend(menu.style, {
+                                  top: (evt.target.offsetTop + rect.height).toString() + "px",
+                                  left: evt.target.offsetLeft.toString() + "px",
+                                  display: 'block'
+                              });
+
+                              options.contextmenu.forEach( function( item ) {
+                                  menu.appendChild( create( 'li', {
+                                      className: 'vtree-contextmenu-item',
+                                      innerHTML: item.label
+                                  }) ).addEventListener( 'click', item.action.bind( item, evt.target.parentNode.getAttribute('data-vtree-id') ) );
+                              });
+
+                              evt.target.parentNode.appendChild( menu );
+                          }
+                      });
+
+                      document.addEventListener( 'click', function( evt ) {
+                          if(evt.button === 2) return;
+                          $( '.vtree-contextmenu' ).forEach( function( menu ) {
+                              menu.parentNode.removeChild( menu );
+                          });
+                      });
+                  }
+              };
+
+          Tree.prototype = {
+              constructor: Tree,
+              _dispatch: function( name, id ) {
+                  var event;
+                  try {
+                      event = new CustomEvent( 'vtree-' + name, {
+                          bubbles: true,
+                          cancelable: true,
+                          detail: {
+                              id: id
+                          }
+                      });
+                  } catch(e) {
+                      event = document.createEvent( 'CustomEvent' );
+                      event.initCustomEvent( 'vtree-' + name, true, true, { id: id });
+                  }
+                  ( this.getLeaf( id, true ) || this.tree )
+                      .dispatchEvent( event );
+                  return this;
+              },
+              _placeholder: function() {
+                  var p;
+                  if( !this.tree.children.length && this.placeholder ) {
+                      this.tree.innerHTML = '<li class="vtree-placeholder">' + this.placeholder + '</li>'
+                  } else if( p = this.tree.querySelector( '.vtree-placeholder' ) ) {
+                      this.tree.removeChild( p );
+                  }
+                  return this;
+              },
+              getLeaf: function( id, notThrow ) {
+                  var leaf = $( '[data-vtree-id="' + id + '"]', this.tree )[ 0 ];
+                  if( !notThrow && !leaf ) throw Error( 'No VanillaTree leaf with id "' + id + '"' )
+                  return leaf;
+              },
+              getChildList: function( id ) {
+                  var list,
+                      parent;
+                  if( id ) {
+                      parent = this.getLeaf( id );
+                      if( !( list = $( 'ul', parent )[ 0 ] ) ) {
+                          list = parent.appendChild( create( 'ul', {
+                              className: 'vtree-subtree'
+                          }) );
+                      }
+                  } else {
+                      list = this.tree;
+                  }
+
+                  return list;
+              },
+              add: function( options ) {
+                  var id,
+                      leaf = create( 'li', {
+                          className: 'vtree-leaf'
+                      }),
+                      parentList = this.getChildList( options.parent );
+
+                  leaf.setAttribute( 'data-vtree-id', id = options.id || Math.random() );
+
+                  leaf.appendChild( create( 'span', {
+                      className: 'vtree-toggle'
+                  }) );
+
+                  leaf.appendChild( create( 'a', {
+                      className: 'vtree-leaf-label',
+                      innerHTML: options.label
+                  }) );
+
+                  parentList.appendChild( leaf );
+
+                  if( parentList !== this.tree ) {
+                      parentList.parentNode.classList.add( 'vtree-has-children' );
+                  }
+
+                  this.leafs[ id ] = options;
+
+                  if( !options.opened ) {
+                      this.close( id );
+                  }
+
+                  if( options.selected ) {
+                      this.select( id );
+                  }
+
+                  return this._placeholder()._dispatch( 'add', id );
+              },
+              move: function( id, parentId ) {
+                  var leaf = this.getLeaf( id ),
+                      oldParent = leaf.parentNode,
+                      newParent = this.getLeaf( parentId, true );
+
+                  if( newParent ) {
+                      newParent.classList.add( 'vtree-has-children' );
+                  }
+
+                  this.getChildList( parentId ).appendChild( leaf );
+                  oldParent.parentNode.classList.toggle( 'vtree-has-children', !!oldParent.children.length );
+
+                  return this._dispatch( 'move', id );
+              },
+              remove: function( id ) {
+                  var leaf = this.getLeaf( id ),
+                      oldParent = leaf.parentNode;
+                  oldParent.removeChild( leaf );
+                  oldParent.parentNode.classList.toggle( 'vtree-has-children', !!oldParent.children.length );
+
+                  return this._placeholder()._dispatch( 'remove', id );
+              },
+              open: function( id ) {
+                  this.getLeaf( id ).classList.remove( 'closed' );
+                  return this._dispatch( 'open', id );
+              },
+              close: function( id ) {
+                  this.getLeaf( id ).classList.add( 'closed' );
+                  return this._dispatch( 'close', id );
+              },
+              toggle: function( id ) {
+                  return this[ this.getLeaf( id ).classList.contains( 'closed' ) ? 'open' : 'close' ]( id );
+              },
+              select: function( id ) {
+                  var leaf = this.getLeaf( id );
+
+                  if( !leaf.classList.contains( 'vtree-selected' ) ) {
+                      $( 'li.vtree-leaf', this.tree ).forEach( function( leaf ) {
+                          leaf.classList.remove( 'vtree-selected' );
+                      });
+
+                      leaf.classList.add( 'vtree-selected' );
+                      this._dispatch( 'select', id );
+                  }
+
+                  return this;
+              }
+          };
+
+          return Tree;
+          // Look at the Balalaika https://github.com/finom/balalaika
+      }));
+
+  </script>
+</head>
+<body>
+<div class="container-fluid p-5">
+    <div class="row">
+        <div class="col-8">
+            <div id="tree" class="card p-5 " style="font-size: 18px"></div>
+        </div>
+        <div class="col-4">
+            <div class="card h-100">
+                <div class="card-header fw-bold">
+                    Selected node
+                </div>
+                <div id="selected-node" class="card-body">
+                    <p class="alert alert-danger">No node selected</p>
+                    <div>
+
+
+                    </div>
+                </div>
+                <div class="card-footer justify-content-evenly d-flex">
+                    <a href="sparql.html" class="btn btn-outline-success">SPARQL</a>
+                    <a href="search.html" class="btn btn-outline-success">Search</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+  <footer></footer>
+
+  <script>
+
+
+    const main = document.getElementById('tree');
+    const info = document.querySelector('footer');
+    let tree = new VanillaTree( main, {});
+
+    function add_node(parent, node) {
+        let id = node.path;
+        let relationship = node.relationship;
+        if (relationship !== undefined)
+        tree.add({
+            label: `${node.name} (${relationship})`,
+            id: id,
+            parent: parent,
+            opened: true
+        });
+        else {
+            tree.add({
+                label: `${node.name}`,
+                id: id,
+                parent: parent,
+                opened: true
+            });
+
+        }
+
+        if (node.data !== undefined){
+            for (let datum of node.data) {
+                add_node(id, datum);
+            }
+
+        }
+    }
+
+
+      async function load() {
+          let data = await (await fetch("api/graph/json")).json();
+
+          function draw_tree(){
+              document.getElementById('tree').innerHTML = "";
+              tree = new VanillaTree( main, {});
+              for (let datum of data) {
+                  add_node("", datum);
+              }
+          }
+
+
+          function find_node(data, path, is_parent=false) {
+              let a = path.toString().split("/");
+
+              let y = data;
+              let node = null;
+              let parent = null;
+
+              for (let name of a) {
+                  for (let datum of y) {
+                      if (datum.name === name){
+                          y = datum.data;
+                          parent = node;
+                          node = datum;
+                          break;
+                      }
+                  }
+              }
+
+              return is_parent ? parent : node;
+          }
+
+          main.addEventListener('vtree-select', function(evt) {
+              let node = find_node(data, evt.detail.id);
+
+              let container = document.getElementById("selected-node");
+              container.innerHTML = "";
+              let div = document.createElement('div');
+              div.innerHTML = `
+                        <div class="mb-3">
+                            <label class="form-label">Selected node:</label>
+                            <input readonly class="form-control" value="${node.name}" placeholder="Parent node"/>
+                        </div>
+                        <div class="mb-3 ${node.relationship === undefined ? 'd-none' : ''}" >
+                            <label class="form-label">Relationship:</label>
+                            <input readonly class="form-control" value="${node.relationship}" placeholder="Relationship"/>
+                            <hr/>
+                        </div>
+
+                        <div class="w-100 d-inline-flex justify-content-around">
+                            <button class="btn btn-outline-success">Edit node</button>
+                            <button class="btn btn-outline-danger">Delete node</button>
+                            <button class="btn btn-outline-info">Add child</button>
+                        </div>
+              `;
+
+              let [edit_btn, del_btn, add_btn] = div.getElementsByTagName('button');
+
+              let add = document.createElement('div');
+              add.innerHTML = `
+
+                        <hr class="mb-3"/>
+
+                        <div class="mb-3 ${node.relationship !== undefined ? 'd-none' : ''}" >
+                            <label class="form-label">Relationship:</label>
+                            <input class="form-control" placeholder="Relationship"/>
+                            <hr/>
+                        </div>
+
+
+                        <div class="mb-3">
+                            <label class="form-label">Child Node:</label>
+                            <input class="form-control" placeholder="Child node"/>
+                        </div>
+                        <div class="w-100 d-inline-flex justify-content-around mb-3">
+                            <button class="btn btn-outline-success">Save child node</button>
+                        </div>
+
+                  `;
+
+              add_btn.onclick = function () {
+
+                  div.appendChild(add);
+
+                  let [relationship, child] = add.getElementsByTagName('input');
+                  let save = add.getElementsByTagName('button')[0];
+                  save.onclick = function () {
+                      if (node.relationship !== undefined){
+                          let v = child.value.trim();
+
+                          if (v.length === 0){
+                              alert("Invalid name!");
+                              return;
+                          }
+
+                          node.data.push(
+                              {'name' : v}
+                          );
+                      }
+                      else {
+
+                          let v = child.value.trim();
+                          let r = relationship.value.trim();
+
+                          if (v.length === 0){
+                              alert("Invalid name!");
+                              return;
+                          }
+                          if (r.length === 0){
+                              alert("Invalid relationship!");
+                              return;
+                          }
+
+                          node.relationship = r;
+                          node.data = [];
+                          node.data.push(
+                              {'name' : v}
+                          );
+
+                      }
+                      draw_tree();
+                      update();
+                  }
+              }
+
+              del_btn.onclick = function () {
+                  let parent = find_node(data, evt.detail.id, true);
+                  let y = [];
+                  for (let i = 0; i < parent.data.length; i++) {
+                      let x = parent.data[i];
+                      if (x.name !== node.name){
+                          y.push(parent.data[i])
+                      }
+                  }
+                  parent.data = y;
+                  if (y.length === 0){
+                      delete parent.data;
+                  }
+                  draw_tree();
+                  update();
+              }
+
+              edit_btn.onclick = function () {
+                  let [child, relationship] = div.getElementsByTagName('input');
+
+                  try{add.remove();}catch(e){}
+
+                  child.removeAttribute('readonly');
+                  relationship.removeAttribute('readonly');
+
+                  del_btn.style.display = 'none';
+                  add_btn.style.display = 'none';
+
+                  edit_btn.innerText = "Save changes";
+                  edit_btn.onclick = function () {
+                      if (node.relationship === undefined){
+                          let v = child.value.trim();
+
+                          if (v.length === 0){
+                              alert("Invalid name!");
+                              return;
+                          }
+
+                          node.name = v;
+                      }
+                      else {
+
+                          let v = child.value.trim();
+                          let r = relationship.value.trim();
+
+                          if (v.length === 0){
+                              alert("Invalid name!");
+                              return;
+                          }
+                          if (r.length === 0){
+                              alert("Invalid relationship!");
+                              return;
+                          }
+
+                          node.relationship = r;
+                          node.name = v;
+
+                      }
+                      draw_tree();
+                      update();
+                  }
+              }
+
+              container.appendChild(div);
+          });
+
+          draw_tree();
+
+          async function update() {
+              let url = "api/graph/update";
+              await fetch(url, {
+                  method: "POST",
+                  headers: {
+                      "Content-Type": "application/json"
+                  },
+                  body: JSON.stringify(data)
+              });
+              window.location.reload();
+          }
+
+      }
+      load();
+
+
+
+  </script>
+</body>
+</html>
